@@ -1,2 +1,2 @@
 ## instlattion
-`$ curl -L raw.github.com/srttk/dotfiles/sh/install.sh | bash`
+`curl -L raw.githubusercontent.com/srttk/dotfiles/master/sh/install.sh | sh`
