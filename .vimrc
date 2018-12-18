@@ -1,3 +1,8 @@
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'elmcast/elm-vim'
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -17,7 +22,7 @@ set number
 set backspace=indent,eol,start
 
 " ヤンクした時クリップボードにコピーする
-set clipboard=unnamed,autoselect
+set clipboard=unnamedplus
 
 " 改行時に前の行のインデントを継続する
 set autoindent
