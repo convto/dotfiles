@@ -3,6 +3,8 @@ Plug 'elmcast/elm-vim'
 Plug 'scrooloose/nerdtree'
 call plug#end()
 
+nnoremap <C-n> :NERDTreeToggle<CR>
+
 set encoding=utf-8
 scriptencoding utf-8
 
@@ -14,7 +16,6 @@ set fileencodings=ucs-boms,utf-8,euc-jp,cp932
 
 " 改行コードの自動判別. 左側が優先される
 set fileformats=unix,dos,mac
-" □や○文字が崩れる問題解
 
 set ambiwidth=double
 " 行数を表示する
@@ -23,9 +24,6 @@ set backspace=indent,eol,start
 
 " ヤンクした時クリップボードにコピーする
 set clipboard=unnamedplus
-
-" 改行時に前の行のインデントを継続する
-set autoindent
 
 " インクリメンタルサーチ. １文字入力毎に検索を行う
 set incsearch
