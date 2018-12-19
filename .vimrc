@@ -1,8 +1,13 @@
+" install plugin
 call plug#begin('~/.local/share/nvim/plugged')
+" for elm
 Plug 'elmcast/elm-vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'hashivim/vim-terraform'
+" for golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" for terraform
+Plug 'hashivim/vim-terraform'
+" file tree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 
 nnoremap <C-n> :NERDTreeToggle<CR>
@@ -61,8 +66,7 @@ set wildmenu
 " 保存するコマンド履歴の数  "
 set history=5000
 
-"色を付ける
-colorscheme pablo
+"シンタックス設定
 syntax enable
 set t_Co=256
 set background=dark
