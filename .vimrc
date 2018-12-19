@@ -1,6 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'elmcast/elm-vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'hashivim/vim-terraform'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 nnoremap <C-n> :NERDTreeToggle<CR>
