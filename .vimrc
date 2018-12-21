@@ -1,16 +1,21 @@
 " install plugin
 call plug#begin('~/.local/share/nvim/plugged')
+" file tree
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+nnoremap <C-n> :NERDTreeToggle<CR>
+" auto complete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
 " for elm
 Plug 'elmcast/elm-vim'
 " for golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#unimported_packages = 1
 " for terraform
 Plug 'hashivim/vim-terraform'
-" file tree
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
-
-nnoremap <C-n> :NERDTreeToggle<CR>
 
 set encoding=utf-8
 scriptencoding utf-8
