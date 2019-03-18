@@ -5,6 +5,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 nnoremap <C-n> :NERDTreeToggle<CR>
 
+" git message
+Plug 'rhysd/git-messenger.vim'
+let g:git_messenger_close_on_cursor_moved = v:false
+nmap <Space>g <Plug>(git-messenger)
+
 " lsp
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -39,7 +44,6 @@ let g:ycm_semantic_triggers = {
      \ 'elm' : ['.'],
      \}
 
-" for golang
 " for terraform
 Plug 'hashivim/vim-terraform'
 let g:terraform_align=1
