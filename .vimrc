@@ -42,6 +42,10 @@ let g:ycm_semantic_triggers = {
 " for golang
 " for terraform
 Plug 'hashivim/vim-terraform'
+let g:terraform_align=1
+let g:terraform_fold_sections=1
+let g:terraform_remap_spacebar=1
+let g:terraform_fmt_on_save=1
 call plug#end()
 
 set encoding=utf-8
