@@ -8,6 +8,6 @@ mkdir ~/.config/nvim
 # repository clone
 git clone git@github.com:srttk/dotfiles.git
 # change dir
-cd ~/dotfiles
+cd ~/dotfiles/sh
 # create symbolic link
-make link
+bash link.sh

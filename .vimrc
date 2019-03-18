@@ -1,12 +1,45 @@
 " install plugin
 call plug#begin('~/.local/share/nvim/plugged')
+
 " file tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 nnoremap <C-n> :NERDTreeToggle<CR>
-" for elm
+
+" lsp
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+
+" golang lsp
+if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+endif
+
+nmap <silent> <Space>d :LspDefinition<CR>
+nmap <silent> <Space>p :LspHover<CR>
+nmap <silent> <Space>r :LspReferences<CR>
+nmap <silent> <Space>i :LspImplementation<CR>
+nmap <silent> <Space>s :split \| :LspDefinition <CR>
+nmap <silent> <Space>v :vsplit \| :LspDefinition <CR>
+
+
+" solid language pack
+Plug 'sheerun/vim-polyglot'
+
+" elm
 Plug 'elmcast/elm-vim'
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:elm_syntastic_show_warnings = 1
+let g:elm_format_autosave = 1
+let g:ycm_semantic_triggers = {
+     \ 'elm' : ['.'],
+     \}
+
 " for golang
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " for terraform
 Plug 'hashivim/vim-terraform'
 call plug#end()
