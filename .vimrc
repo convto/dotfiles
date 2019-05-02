@@ -30,7 +30,6 @@ nmap <silent> <Space>i :LspImplementation<CR>
 nmap <silent> <Space>s :split \| :LspDefinition <CR>
 nmap <silent> <Space>v :vsplit \| :LspDefinition <CR>
 
-
 " solid language pack
 Plug 'sheerun/vim-polyglot'
 
