@@ -3,7 +3,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " file tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-s> :NERDTreeToggle<CR>
 
 " git message
 Plug 'rhysd/git-messenger.vim'
