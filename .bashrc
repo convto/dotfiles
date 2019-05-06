@@ -19,3 +19,6 @@ alias c='kubectl'
 
 # tmux
 alias t='tmux'
+
+# docker quic run
+alias drn='docker run -it --rm'
