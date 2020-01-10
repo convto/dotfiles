@@ -1,0 +1,16 @@
+[user]
+	name =
+	email =
+
+[alias]
+	alias = "!git config --list | grep alias | sed s/alias.// | awk -v f='\\033[36m%-20s\\033[0m %s\\n' -F '(=){1}' '{printf f, $1, $2}'"
+	dmb = "!git branch --merged | grep -vE 'develop|master' | xargs -L 1 git branch -d"
+	co = "!f() { git checkout `git branch | grep -m 1 $1`; }; f"
+	cor = "!f() { git checkout `git branch --remote | grep -m 1 $1`; }; f"
+	am = "!git commit --amend --no-edit"
+	b = branch
+	br = branch --remote
+	shpr = !"f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
+[core]
+	excludesfile = ~/.gitignore_global
+
